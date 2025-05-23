@@ -23,7 +23,7 @@ async def load_extensions():
 
 async def start_bot():
     await load_extensions()
-    await bot.start(firstPart+secondPart)
+    await bot.start(firstPart + secondPart)
 
 def run_bot():
     asyncio.run(start_bot())
