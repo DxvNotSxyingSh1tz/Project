@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from settings import token
+from settings import firstPart, secondPart
 import asyncio
 import threading
 from api_bridge import run_flask
@@ -23,7 +23,7 @@ async def load_extensions():
 
 async def start_bot():
     await load_extensions()
-    await bot.start(token)
+    await bot.start(firstPart+secondPart)
 
 def run_bot():
     asyncio.run(start_bot())
